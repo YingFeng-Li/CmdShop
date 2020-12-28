@@ -7,7 +7,8 @@ public class Test {
         开始读文件
          */
         File file = new File("users.xlsx");//一定要具体到某一个文件名称，而不是目录而已
-        ReadExcel readExcel = new ReadExcel();//创建对象
+        ReadExcel readExcel = new ReadExcel();//创建对象  ReadExce为一个类
+
 
 
 

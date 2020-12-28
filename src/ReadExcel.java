@@ -26,7 +26,7 @@ public class ReadExcel {
                     if (cell == null)
                         continue;
                     if (k == 0) {
-                        user.setUsername(this.getValue(cell));
+                        user.setName(this.getValue(cell));
                     } else if (k == 1) {
                         user.setPassword(this.getValue(cell));
                     } else if (k == 2) {
