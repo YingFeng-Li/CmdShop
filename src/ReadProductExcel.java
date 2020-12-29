@@ -1,3 +1,4 @@
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -36,6 +37,7 @@ public class ReadProductExcel {
                         product.setDesc(this.getValue(cell));
                     }
                     products[j - 1] = product;
+
                 }
             }
         } catch (IOException e) {
@@ -43,7 +45,35 @@ public class ReadProductExcel {
         }
             return products;
         }
+
+    private String getValue(XSSFCell cell) {
+        String value;
+        CellType type = cell.getCellTypeEnum();
+
+        switch (type) {
+            case STRING:
+                value = cell.getStringCellValue();
+                break;
+            case BLANK:
+                value = "";
+                break;
+            case BOOLEAN:
+                value = cell.getBooleanCellValue() + "";
+                break;
+            case NUMERIC:
+                value = cell.getNumericCellValue() + "";
+                break;
+            case FORMULA:
+                value = cell.getCellFormula();
+                break;
+            case ERROR:
+                value = "非法字符";
+                break;
+            default:
+                value = "";
+                break;
         }
+        return value;
     }
 
 
