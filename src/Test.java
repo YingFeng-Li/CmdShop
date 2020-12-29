@@ -7,7 +7,7 @@ public class Test {
         开始读文件
          */
         File file = new File("E:\\蓝桥学习\\MyCode\\CmdShop\\src\\users.xlsx");//一定要具体到某一个文件名称，而不是目录而已
-        ReadExcel readExcel = new ReadExcel();//创建对象  ReadExce为一个类
+        ReadExcel readExcel = new ReadExcel();//创建对象  ReadExcel为一个类
         User users[] = readExcel.readExcel(file);
 
         boolean flag = true;
