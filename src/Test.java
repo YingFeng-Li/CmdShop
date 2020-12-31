@@ -46,10 +46,11 @@ public class Test {
                         System.out.println("你购买的商品数量为"+count);
 
                     }
+
                     System.out.println("你购物车里的商品为：");
                     for(i=0;i<count;i++){
 
-                        System.out.print(+products1[i]);
+                        System.out.print("+products1[i]");
                     }
                     System.out.println("是否继续购物");
                     for (Product product1:products) {
